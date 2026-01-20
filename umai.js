@@ -15,6 +15,8 @@ function showLetter() {
         typedText.innerHTML += message.charAt(i);
         i++;
         setTimeout(typeWriter, 30);
+
+    document.getElementById("gifBox").style.display = "block";
       }
     }
 
