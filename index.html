@@ -1,33 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Happy 4 Monthsary!</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Our 4 Monthsary</title>
+    <style>
+        /* This is the CSS - The "Paint" */
+        body {
+            background-color: #fff0f5; /* Lavender Blush */
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .menu-title {
+            color: #d81b60;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            margin-bottom: 40px;
+        }
+
+        button {
+            background-color: #ff80ab;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 5px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #f50057;
+            transform: scale(1.1);
+        }
+
+        /* This creates the Polaroid effect */
+        .polaroid {
+            background: white;
+            padding: 15px 15px 60px 15px; /* Extra space at bottom for text */
+            border: 1px solid #ddd;
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+            display: inline-block;
+            max-width: 300px;
+            transform: rotate(-3deg); /* Tilts the photo slightly */
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: auto;
+        }
+
+        .caption {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 1.5rem;
+            color: #333;
+            margin-top: 15px;
+        }
+        .letter-box {
+            max-width: 500px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #ff80ab;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        /* This hides things until we are ready to see them */
+        .hidden { display: none; }
+    </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Happy 4 Monthsary!</h1>
-        
-        <div class="menu">
-            <button onclick="showMemory(1)">1st Month</button>
-            <button onclick="showMemory(2)">2nd Month</button>
-            <button onclick="showMemory(3)">3rd Month</button>
-            <button onclick="showMemory(4)">4th Month</button>
+    <h1 class="menu-title">Happy 4 Monthsary! ❤️</h1>
+
+    <div class="button-container">
+        <button onclick="changeMemory(1)">1st Month</button>
+        <button onclick="changeMemory(2)">2nd Month</button>
+        <button onclick="changeMemory(3)">3rd Month</button>
+        <button onclick="changeMemory(4)">4th Month</button>
+    </div>
+
+    <div id="content-area" class="hidden">
+        <div class="polaroid">
+            <img id="photo" src="" alt="Memory Photo">
+            <div id="caption" class="caption"></div>
         </div>
 
-        <div id="memory-display" class="hidden">
-            <div class="polaroid">
-                <img id="memory-img" src="" alt="Our Memory">
-                <div class="caption" id="memory-caption">Our Moment</div>
-            </div>
-            <div class="letter">
-                <p id="memory-text"></p>
-            </div>
+        <div class="letter-box">
+            <p id="letter-text"></p>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        /* This is the JavaScript - The "Brain" */
+        function changeMemory(month) {
+            // Show the hidden area
+            document.getElementById('content-area').style.display = "block";
+
+            const photo = document.getElementById('photo');
+            const caption = document.getElementById('caption');
+            const letter = document.getElementById('letter-text');
+
+            if (month === 1) {
+                photo.src = "photo1.jpg"; // CHANGE THIS to your image name
+                caption.innerText = "The day we met";
+                letter.innerText = "I remember how nervous I was... [Write your 1st month letter here]";
+            } 
+            else if (month === 2) {
+                photo.src = "photo2.jpg"; 
+                caption.innerText = "Our first date";
+                letter.innerText = "Two months in and I'm already falling... [Write your 2nd month letter here]";
+            }
+            else if (month === 3) {
+                photo.src = "photo3.jpg";
+                caption.innerText = "Making memories";
+                letter.innerText = "Three months felt like a dream... [Write your 3rd month letter here]";
+            }
+            else if (month === 4) {
+                photo.src = "photo4.jpg";
+                caption.innerText = "Happy 4 Months!";
+                letter.innerText = "Here we are today. I love you! [Write your 4th month letter here]";
+            }
+        }
+    </script>
+
 </body>
 </html>
