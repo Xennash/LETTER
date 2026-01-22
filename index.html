@@ -3,9 +3,9 @@
 <head>
     <title>Our 4 Monthsary</title>
     <style>
-   
+        /* This is the CSS - The "Paint" */
         body {
-            background-color: #fff0f5;
+            background-color: #fff0f5; /* Lavender Blush */
             font-family: 'Arial', sans-serif;
             text-align: center;
             padding: 50px;
@@ -38,15 +38,15 @@
             transform: scale(1.1);
         }
 
-      
+        /* This creates the Polaroid effect */
         .polaroid {
             background: white;
-            padding: 15px 15px 60px 15px;
+            padding: 15px 15px 60px 15px; /* Extra space at bottom for text */
             border: 1px solid #ddd;
             box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
             display: inline-block;
             max-width: 300px;
-            transform: rotate(-3deg);
+            transform: rotate(-3deg); /* Tilts the photo slightly */
         }
 
         .polaroid img {
@@ -71,19 +71,19 @@
             text-align: left;
         }
 
-     
+        /* This hides things until we are ready to see them */
         .hidden { display: none; }
     </style>
 </head>
 <body>
 
-    <h1 class="menu-title">Happy 4 monthsary babyyyy!!!! ❤️</h1>
+    <h1 class="menu-title">Happy 4 monthsary to my airaaaa!!❤️</h1>
 
     <div class="button-container">
-        <button onclick="changeMemory(1)">first month</button>
-        <button onclick="changeMemory(2)">second month</button>
-        <button onclick="changeMemory(3)">third month</button>
-        <button onclick="changeMemory(4)">NOW!!</button>
+        <button onclick="changeMemory(1)">1st Month</button>
+        <button onclick="changeMemory(2)">2nd Month</button>
+        <button onclick="changeMemory(3)">3rd Month</button>
+        <button onclick="changeMemory(4)">4th Month</button>
     </div>
 
     <div id="content-area" class="hidden">
@@ -98,7 +98,9 @@
     </div>
 
     <script>
-        function changeMemory(month)
+        /* This is the JavaScript - The "Brain" */
+        function changeMemory(month) {
+            // Show the hidden area
             document.getElementById('content-area').style.display = "block";
 
             const photo = document.getElementById('photo');
@@ -106,24 +108,24 @@
             const letter = document.getElementById('letter-text');
 
             if (month === 1) {
-                photo.src = "photo1.jpg";
+                photo.src = "photo1.jpg"; // CHANGE THIS to your image name
                 caption.innerText = "The day we met";
-                letter.innerText = "I remember how nervous I was... ";
+                letter.innerText = "I remember how nervous I was... [Write your 1st month letter here]";
             } 
             else if (month === 2) {
                 photo.src = "photo2.jpg"; 
                 caption.innerText = "Our first date";
-                letter.innerText = "Two months in and I'm already falling... ";
+                letter.innerText = "Two months in and I'm already falling... [Write your 2nd month letter here]";
             }
             else if (month === 3) {
                 photo.src = "photo3.jpg";
                 caption.innerText = "Making memories";
-                letter.innerText = "Three months felt like a dream... ";
+                letter.innerText = "Three months felt like a dream... [Write your 3rd month letter here]";
             }
             else if (month === 4) {
                 photo.src = "photo4.jpg";
                 caption.innerText = "Happy 4 Months!";
-                letter.innerText = "Here we are today. I love you! ";
+                letter.innerText = "Here we are today. I love you! [Write your 4th month letter here]";
             }
         }
     </script>
