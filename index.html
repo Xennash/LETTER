@@ -3,9 +3,9 @@
 <head>
     <title>Our 4 Monthsary</title>
     <style>
-        /* This is the CSS - The "Paint" */
+   
         body {
-            background-color: #fff0f5; /* Lavender Blush */
+            background-color: #fff0f5;
             font-family: 'Arial', sans-serif;
             text-align: center;
             padding: 50px;
@@ -38,15 +38,15 @@
             transform: scale(1.1);
         }
 
-        /* This creates the Polaroid effect */
+      
         .polaroid {
             background: white;
-            padding: 15px 15px 60px 15px; /* Extra space at bottom for text */
+            padding: 15px 15px 60px 15px;
             border: 1px solid #ddd;
             box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
             display: inline-block;
             max-width: 300px;
-            transform: rotate(-3deg); /* Tilts the photo slightly */
+            transform: rotate(-3deg);
         }
 
         .polaroid img {
@@ -71,7 +71,7 @@
             text-align: left;
         }
 
-        /* This hides things until we are ready to see them */
+     
         .hidden { display: none; }
     </style>
 </head>
@@ -98,9 +98,7 @@
     </div>
 
     <script>
-        /* This is the JavaScript - The "Brain" */
-        function changeMemory(month) {
-            // Show the hidden area
+        function changeMemory(month)
             document.getElementById('content-area').style.display = "block";
 
             const photo = document.getElementById('photo');
@@ -108,24 +106,24 @@
             const letter = document.getElementById('letter-text');
 
             if (month === 1) {
-                photo.src = "photo1.jpg"; // CHANGE THIS to your image name
+                photo.src = "photo1.jpg";
                 caption.innerText = "The day we met";
-                letter.innerText = "I remember how nervous I was... [Write your 1st month letter here]";
+                letter.innerText = "I remember how nervous I was... ";
             } 
             else if (month === 2) {
                 photo.src = "photo2.jpg"; 
                 caption.innerText = "Our first date";
-                letter.innerText = "Two months in and I'm already falling... [Write your 2nd month letter here]";
+                letter.innerText = "Two months in and I'm already falling... ";
             }
             else if (month === 3) {
                 photo.src = "photo3.jpg";
                 caption.innerText = "Making memories";
-                letter.innerText = "Three months felt like a dream... [Write your 3rd month letter here]";
+                letter.innerText = "Three months felt like a dream... ";
             }
             else if (month === 4) {
                 photo.src = "photo4.jpg";
                 caption.innerText = "Happy 4 Months!";
-                letter.innerText = "Here we are today. I love you! [Write your 4th month letter here]";
+                letter.innerText = "Here we are today. I love you! ";
             }
         }
     </script>
