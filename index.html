@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy 4 Monthsary!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Happy 4 Monthsary!</h1>
+        
+        <div class="menu">
+            <button onclick="showMemory(1)">1st Month</button>
+            <button onclick="showMemory(2)">2nd Month</button>
+            <button onclick="showMemory(3)">3rd Month</button>
+            <button onclick="showMemory(4)">4th Month</button>
+        </div>
+
+        <div id="memory-display" class="hidden">
+            <div class="polaroid">
+                <img id="memory-img" src="" alt="Our Memory">
+                <div class="caption" id="memory-caption">Our Moment</div>
+            </div>
+            <div class="letter">
+                <p id="memory-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
