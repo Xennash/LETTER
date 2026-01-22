@@ -6,6 +6,7 @@
        
         body {
             background: linear-gradient(to top right,#ffc1d6,#ff92b6); 
+            background-attachment: fixed;
             font-family: 'Arial', sans-serif;
             text-align: center;
             padding: 50px;
@@ -78,14 +79,42 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
+            border: 5px solid #ffffff;
         }
-            
-
-      
+        .sakura {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-event: none;
+        z-index: -1;
+            }
+        .sakura span {
+        position: absolute;
+        width:15px;
+        height:11px;
+        background: #ffb7c5}
+        border-radius: 50% 0 50% 0;
+        animation: fall 10s linear infinite;
+        opacity: 80%;
+        }
+      @keyframe fall {
+      0% {
+      top: -10%;
+      transform: translateX(0) rotate(0deg);
+      }
+      100% {
+      top: 110%;
+      transform: translateX(100px) rotate(360deg);
+      }
+      }
         .hidden { display: none; }
     </style>
 </head>
 <body>
+<div class="sakura">
+<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
 <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTcwZHM3MGxjZ3E3MW8ycGdnd3BtNG5pNHJ3N3h6cmtpNjhuMGVtciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/B0LANRRToWzt12L0l7/giphy.gif" class="gif">
     <h1 class="menu-title">Happy 4 monthsary to my airaaaa!!❤️</h1>
 
@@ -116,6 +145,7 @@
             const photo = document.getElementById('photo');
             const caption = document.getElementById('caption');
             const letter = document.getElementById('letter-text');
+            var song = document.getElementById('song');
 
             if (month === 1) {
                 photo.src = "photo1.jpg"; 
@@ -142,4 +172,5 @@
 
 </body>
 </html>
+
 
