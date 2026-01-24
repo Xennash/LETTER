@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our 4 Monthsary</title>
+    <style>
+       
+        body {
+            background: linear-gradient(to top right,#ffc1d6,#ff92b6); 
+            background-attachment: fixed;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+
+        .button-container {
+            margin-bottom: 40px;
+        }
+
+        button {
+            background-color: #ff80ab;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 5px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #f50057;
+            transform: scale(1.1);
+        }
+
+      
+        .polaroid {
+            background: white;
+            padding: 15px 15px 60px 15px; 
+            border: 1px solid #ddd;
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+            display: inline-block;
+            max-width: 300px;
+            transform: rotate(-3deg);
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: auto;
+        }
+
+        .caption {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 1.5rem;
+            color: #333;
+            margin-top: 15px;
+        }
+        .letter-box {
+            max-width: 500px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #ff80ab;
+            line-height: 1.6;
+            text-align: left;
+        }
+        .gif {
+            width: 300px;
+                height: auto;
+            margin-button: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 5px solid #ffffff;
+        }
+
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTcwZHM3MGxjZ3E3MW8ycGdnd3BtNG5pNHJ3N3h6cmtpNjhuMGVtciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/B0LANRRToWzt12L0l7/giphy.gif" class="gif">
+    <h1 class="menu-title">IM SORRYYY</h1>
+  <p> HUAAA BABYYY IM SO SORRYYY,I DONT MEAN TO DO THATTT TO YOUU</p>
+
+    <div class="button-container">
+        <button onclick="changeMemory(6)">Yes</button>
+        <button onclick="changeMemory(7)">No</butto>
+    </div>
+
+    <div id="content-area" class="hidden">
+        <div class="polaroid">
+            <img id="photo" src="" alt="Memory Photo">
+            <div id="caption" class="caption"></div>
+        </div>
+
+        <div class="letter-box">
+            <p id="letter-text"></p>
+        </div>
+    </div>
+
+    <script>
+      
+        function changeMemory(month) {
+           
+            document.getElementById('content-area').style.display = "block";
+
+            const photo = document.getElementById('photo');
+            const caption = document.getElementById('caption');
+            const letter = document.getElementById('letter-text');
+            var song = document.getElementById('song');
+
+            if (month === 1) {
+                photo.src = "photo1.jpg"; 
+                caption.innerText = "the day we met!!";
+                letter.innerText = "i still remember how nervous i was when we first met,at that time i cant even look at you straight in the eyes because of how nervous i was.as i told you,the very first thing i said when i look at you is how cute you are because YOU ARE VERY cUTEEE.At that time,i really doesnt want to be with anyone because how bad my last relatiohip shattered my heart but u came like an angel straight from heaven.its funny how i get all jealous when u talking to other boys eventhough at that tme we dont even have any status yet and i felt so stupid for that lollll.im really glad that you came to my life and make every day worth living for eventhought life treat me like shit sometime but atleast youre there with me evrytim.i still remember how u cried because i ignored you eventhough ure the one who ignored me frst HUUUUUUU.this was the best month ever because i got to know you a lot eventhough i have cut contact wih a lot of ppl especialy girls but its okay because i only need you in my life.yu own me and i own you.ill forever cherish this month because i was the BESTTTTTT MONTH EVWERRRR.i loveee you so much my babyyyy and i hope you know that.please dont ever ever leave me alone because youre the ony ne i want and need.the only one who deserve you is me and only me";
+            } 
+            else if (month === 2) {
+                photo.src = "photo2.jpg"; 
+                caption.innerText = "Our first date!!";
+                letter.innerText = "two month in and its already feel like ive known you forever.this month is also when we overcomed a lot of problems together from almost breaking up to a fake rumour.its felt like the world are againts us buut were stil wont give up from each other.i still remembered how my trust is being test at that time,its hard for me because how bad my trust issue broked from my last relationship.however,i still choose to trust you and demanding an answer from those who accused you of something so filthy.i want to kill them,shove ther throat with a rotten rat to shut their mouth ff but im not that kind of person.well lets forgot about that an focus of what weve accomplishd this mont.this month is also when you met papa and mama,NYAHHAHAHA  still remember how nervous yu was to meet them.this month is aldo when we meet each other the most and talk to ach other the most eventhough we have to fake breaking up the last mont.HAHAHAHHAHA KATA U NAK BOCK ME TAPI TAKPONNNN.welll sebab i insist nt to thoooo tapi ye ke sebab me jeeee.keeee dia pon tanak block huuuuuuu.atleast we accompished alot this month and ill always cherish them!! i want to achieve a lot more with you upcoming futureeeeeeeeeeee! i loveeee youuuu dummmyyyyyy!!!!!";
+            }
+            else if (month === 3) {
+                photo.src = "photo3.jpg";
+                caption.innerText = "making memories!!";
+                letter.innerText = "Three months felt like a dream...i still cant believe that ma allow us to watch a movie together without her and even let me pick you up HAHAHAHA.EEEEEEE THIS IS THE BEST MONTHSARY EVER BECAUSEEE WE DID A LOT OF THINGGGG YYAYAYYAYAYAYA.you resting on my shoulder...EEEEEE THATS SO UNEXPECT LIKE NO ONE EVER DOES THAT TO MEEEE.t was so comfyy tho heheeee.we also get to take a polaroid picture together with akak and adikkkkk.u are so silly that dayyyy,alwys smiling and laughingggg nonstopp EEE SO CUTEEE.siapaa jee takk meltingg seeing you all happy and smiling at that timee!! i wishhh the next monthsaryyy we can do a lotttt moreeeee and moreeeeeeeeeeeeeee fun andddddddddddd sillyyyyy heheee! i hope u never bored of meee and never leave meeee huhuuuuuu! i loveee you so muchhh so pleaseee dont leavee meeee.ill do anythinggg even if i have to sacrifice everything for you.youre the only one i havee nowww,i already cut contact with a lot of peoples just for youu sooo pleasee appreciate my efforttt and stayyy eith meee even if im beinggg to needyyy and clinggy and attached to youuu! happy 3rd monthsary babyyyy!! ill alwayss loveee you no matter whattt heeheeee";
+            }
+            else if (month === 4) {
+                photo.src = "photo4.jpg";
+                caption.innerText = "Happy 4 Monthsary babyyyyyyyyy!";
+                letter.innerText = "HAIAHIAHAIAHAIA HAPPYYY 4 MONTHSARYYY BABYYYY! I LOVEEE U SO MUCH I HOPE U KNOWEW THATTT!! huhuuuuu i write this letter while having theeee bad headache everrr huhuuu buttt still i wantt to completee this website and write a letter for youuu! to my sweet girll airaa,youre the best thing that ever happend to me.tbh,i never ever find someone as perfect as youuu and if u everrr said u dontt deserve meee.thats so dsmnn wrongg!! youre the most perfect angel-likeee person everrr heheee.tooo bee truthfull,thiss monthh we dont meet each other much.no noo we dont meet each other at alll but its okayyy becausee all that matter is the time we spend on phoneee!! eventhough latelyyy you was tooo busyyy but its okayy as long as you give me attention heheeee! sorryyy for beingg to needy and attacheddd huhuuuu :c j justtt lovee u so muchhhh that i want to cling to you foreverrr and everrr! AIRAAAA AND AIDILLL FOREVERRR!!! AND WILL ALWAYSSSSSS BEEE TOGETHER EHEHHEHEHE!!";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
