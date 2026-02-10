@@ -23,7 +23,7 @@
             color: #d63384;
         }
 
-        /* Falling Blossoms */
+    
         .petal {
             position: fixed;
             top: -10px;
@@ -56,7 +56,7 @@
             box-shadow: 0 0 15px var(--pink-dark);
         }
 
-        /* ENVELOPE STYLING */
+    
         .envelope-wrapper {
             height: 380px;
             display: flex;
@@ -77,7 +77,7 @@
             transition: 0.5s;
         }
 
-        /* The flap */
+        
         .envelope::before {
             content: "";
             position: absolute;
@@ -90,7 +90,7 @@
             transition: transform 0.5s;
         }
 
-        /* The letter inside */
+        
         .letter {
             position: absolute;
             bottom: 0;
@@ -109,7 +109,7 @@
             color: #333;
         }
 
-        /* Open State */
+    
         .envelope.open::before {
             transform: rotateX(180deg);
             z-index: 0;
@@ -122,7 +122,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        /* Runaway Button Zone */
+        
         .btn-container {
             margin-top: 20px;
             height: 150px;
@@ -169,24 +169,24 @@
 <body>
 
     <div class="header-zone">
-        <h1>Happy Birthday, My Moon! 🌙</h1>
+        <h1>HAPPYYY BIRTHDAYY MY BABYYYYY</h1>
         <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHY5M3Z6ZzR6bm9oZzR6bm9oZzR6bm9oZzR6bm9oZzR6bm9oZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/106H6aMPhwqzjW/giphy.gif" class="usagi-gif" alt="Usagi Dancing">
-        <p>Click the envelope below to open your letter!</p>
+        <p>CLICKK THE ENVELOPEE TO READDD MY LETTERR</p>
     </div>
 
     
 
-    <p>Do you accept this letter?</p>
+    <p>DO YOU WANTT A BIRTHDAY KISSEYYYY??🥺</p>
 
     <div class="btn-container">
-        <button id="yesBtn" onclick="finish()">YES! 🥰</button>
-        <button id="noBtn" onmouseover="moveNo()">EW, NO 🌸</button>
+        <button id="yesBtn" onclick="finish()">YESSEYY!! </button>
+        <button id="noBtn" onmouseover="moveNo()">EW</button>
     </div>
 
     <div id="finalPop" class="hidden-celebration">
-        <h2>YAYYYY! 💖</h2>
+        <h2>YEYYEYEYEYE</h2>
         <img src="https://media.giphy.com/media/11sXv63Eub9lC0/giphy.gif" width="150"><br>
-        <p>You're stuck with me no<div class="envelope-wrapper">
+        <p>(data send) noww the next datee u have to give me birthday kisseyyy >:3<div class="envelope-wrapper">
     <div class="envelope" onclick="this.classList.toggle('open')">
       <div class="le<divtter">
         <h3>to myy bestest,sweetestt,prettiestt,kindest and funniest girlfriend everrr</h3>
@@ -208,7 +208,7 @@ w! Happy Birthday!</p>
     </div>
 
     <script>
-        // Move the "No" button
+        
         function moveNo() {
             const x = Math.random() * (window.innerWidth - 100);
             const y = Math.random() * (window.innerHeight - 100);
@@ -218,7 +218,7 @@ w! Happy Birthday!</p>
             btn.style.position = 'fixed';
         }
 
-        // Celebrate
+        
         function finish() {
             document.getElementById('finalPop').style.display = 'block';
             for(let i=0; i<50; i++) {
@@ -226,7 +226,7 @@ w! Happy Birthday!</p>
             }
         }
 
-        // Sakura Petal Rain
+        
         function createPetal() {
             const petal = document.createElement('div');
             petal.innerHTML = '🌸';
@@ -239,7 +239,7 @@ w! Happy Birthday!</p>
             setTimeout(() => petal.remove(), 5000);
         }
 
-        // Start slow petal rain immediately
+        
         setInterval(createPetal, 500);
     </script>
 </body>
