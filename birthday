@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usagi's Birthday Surprise! 🌸</title>
+    <style>
+        :root {
+            --pink-light: #ffebf0;
+            --pink-main: #ffb7c5; /* Sakura Pink */
+            --pink-dark: #ff85a1;
+        }
+
+        body {
+            background-color: var(--pink-light);
+            background-image: url('https://www.transparenttextures.com/patterns/sakura.png'); /* Subtle blossom pattern */
+            font-family: 'Comic Sans MS', cursive;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            color: #d63384;
+        }
+
+        /* Falling Blossoms */
+        .petal {
+            position: fixed;
+            top: -10px;
+            z-index: 999;
+            pointer-events: none;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(105vh) rotate(360deg);
+            }
+        }
+
+        .header-zone {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px white;
+            animation: pulse 2s infinite;
+        }
+
+        .usagi-gif {
+            width: 200px;
+            border-radius: 20px;
+            border: 4px solid white;
+            box-shadow: 0 0 15px var(--pink-dark);
+        }
+
+        /* ENVELOPE STYLING */
+        .envelope-wrapper {
+            height: 380px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .envelope {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background: var(--pink-main);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        /* The flap */
+        .envelope::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            z-index: 2;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-top: 100px solid var(--pink-dark);
+            transform-origin: top;
+            transition: transform 0.5s;
+        }
+
+        /* The letter inside */
+        .letter {
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            width: 280px;
+            height: 180px;
+            background: white;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: 0.5s;
+            z-index: 1;
+            text-align: center;
+            overflow-y: auto;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        /* Open State */
+        .envelope.open::before {
+            transform: rotateX(180deg);
+            z-index: 0;
+        }
+
+        .envelope.open .letter {
+            transform: translateY(-150px);
+            height: 250px;
+            z-index: 2;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Runaway Button Zone */
+        .btn-container {
+            margin-top: 20px;
+            height: 150px;
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        #yesBtn { background: #ff4d6d; color: white; box-shadow: 0 5px #c9184a; }
+        #noBtn { background: #ccc; color: #666; position: absolute; left: 55%; }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .hidden-celebration {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            border: 5px solid var(--pink-dark);
+            z-index: 1000;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-zone">
+        <h1>Happy Birthday, My Moon! 🌙</h1>
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHY5M3Z6ZzR6bm9oZzR6bm9oZzR6bm9oZzR6bm9oZzR6bm9oZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/106H6aMPhwqzjW/giphy.gif" class="usagi-gif" alt="Usagi Dancing">
+        <p>Click the envelope below to open your letter!</p>
+    </div>
+
+    
+
+    <p>Do you accept this letter?</p>
+
+    <div class="btn-container">
+        <button id="yesBtn" onclick="finish()">YES! 🥰</button>
+        <button id="noBtn" onmouseover="moveNo()">EW, NO 🌸</button>
+    </div>
+
+    <div id="finalPop" class="hidden-celebration">
+        <h2>YAYYYY! 💖</h2>
+        <img src="https://media.giphy.com/media/11sXv63Eub9lC0/giphy.gif" width="150"><br>
+        <p>You're stuck with me no<div class="envelope-wrapper">
+    <div class="envelope" onclick="this.classList.toggle('open')">
+      <div class="le<divtter">
+        <h3>to myy bestest,sweetestt,prettiestt,kindest and funniest girlfriend everrr</h3>
+        <p>
+          Haiii sillyyy! sorryy if the website kinda choppyy and baddd hehehehe.. 💖 <br><br>
+          Happiest birthdayy tooo myy ms crybabyyy,my pretty girl,my bestestt GIRLFRIEND EVERR !!
+          SEMOGA ALLAHPANJANGKANN UMUR DANN MEMPERCEPATKAN PERKAHWINANN KITAA NAYAHAHAHA
+          <br><br>
+          i wishhh i couldd find a gurll as amazingg as youu but no other girll will er comparee too myyy babyyyyyy!!!! and i knoww for a fact tahtt you will alwayss be my bestestttt and favouritegirlfriendd everrrrr!!!<br><br></br>
+          ill keep you in my hearttt,alwaysss.you will be the onlyyy girll i long for and priorities.i wouldd talk to my mscrybabyy dayyy and nghttt!!!
+          <br><br>
+          <b>youre amazingg as you aree so pleaseee dont change a thingggg my babyyyy HEHEHHEHEH!!</b>
+        </p>
+      </div>
+    </div>
+  </div>
+w! Happy Birthday!</p>
+        <button onclick="document.getElementById('finalPop').style.display='none'">Close</button>
+    </div>
+
+    <script>
+        // Move the "No" button
+        function moveNo() {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 100);
+            const btn = document.getElementById('noBtn');
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+            btn.style.position = 'fixed';
+        }
+
+        // Celebrate
+        function finish() {
+            document.getElementById('finalPop').style.display = 'block';
+            for(let i=0; i<50; i++) {
+                setTimeout(createPetal, i * 100);
+            }
+        }
+
+        // Sakura Petal Rain
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.innerHTML = '🌸';
+            petal.classList.add('petal');
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.fontSize = Math.random() * 20 + 10 + 'px';
+            petal.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(petal);
+            
+            setTimeout(() => petal.remove(), 5000);
+        }
+
+        // Start slow petal rain immediately
+        setInterval(createPetal, 500);
+    </script>
+</body>
+</html>
+
