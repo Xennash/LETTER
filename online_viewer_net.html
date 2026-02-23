@@ -1,0 +1,57 @@
+<title>IM SORRY</title>
+
+<style>
+    body,html {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+    .canvas{
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .image {
+        width: 900px;
+        height: 1200px;
+        position: relative;
+        
+        background-image: url('https://image2url.com/r2/default/images/1771806651444-5323bc61-e889-4dff-9e64-5d2ce82b2ced.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+        -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="8"><text x="0" y="6" font-family="sans-serif" font-size="5" font-weight="900" letter-spacing="0">imsorryyyyyy</text></svg>');
+            -webkit-mask-repeat: repeat;
+            -webkit-mask-size: 32px 7px; 
+            
+            mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="35" height="8"><text x="0" y="6" font-family="Arial Black, sans-serif" font-size="5" font-weight="900" letter-spacing="0">sigmaysigmammmm</text></svg>');
+            -webkit-mask-repeat: repeat;
+            -webkit-mask-size: 32px 7px;
+            
+            transition: transform 0.3s ease;
+        }
+        .text {
+            display: flex;
+            position:  absolute;
+           text-align: center;
+           
+        }
+        
+    }
+    
+</style>
+</head>
+<body>
+    
+    <div class="canvas">
+    <div class="image"></div>
+    </div>
+</body>
+</html>
